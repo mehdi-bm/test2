@@ -2,6 +2,7 @@ package com.example.test2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import com.example.test2.databinding.ActivityMain4Binding
 
@@ -13,13 +14,23 @@ class MainActivity4 : AppCompatActivity() {
         "good",
         "very good"
     )
+    val Arraystr2= arrayListOf<String>(
+        "ali",
+        "AliReza",
+        "Reza",
+        "Mehdi",
+        "AliHossein",
+        "Hossein",
+        "amir",
+        "Mohammad"
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityMain4Binding.inflate(layoutInflater)
         val view=binding.root
         setContentView(view)
         setTitle("test 4")
-
+        val adaptername=ArrayAdapter(this,android.R.layout.simple_list_item_1,Arraystr2)
         binding.apply {
             ratingBar.setOnRatingBarChangeListener { ratingBar, fl, b ->
                 if (ratingBar.rating in 0.0..2.0)
@@ -31,6 +42,9 @@ class MainActivity4 : AppCompatActivity() {
                 else  if (ratingBar.rating in 4.5..5.0)
                     Toast.makeText(this@MainActivity4, Arraystr[3], Toast.LENGTH_SHORT).show()
             }
+        actxtMain4Test.setAdapter(adaptername)
+            actxtMain4Test.threshold=1
+
         }
     }
 }
