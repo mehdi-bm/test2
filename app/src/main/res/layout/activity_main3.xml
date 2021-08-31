@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity3">
+
+    <TextView
+        android:id="@+id/txt_main3_price"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:layout_marginTop="10dp"
+        tools:text="120000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/txt_main3_priceOf"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        tools:text="60000"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txt_main3_timer"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        tools:text="0:00"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_main3_start"
+        android:text="@string/start"
+        android:layout_marginTop="10dp"
+        android:textSize="28sp"
+        android:onClick="onClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_main3_pause"
+        android:text="@string/pause"
+        android:layout_marginTop="10dp"
+        android:textSize="28sp"
+        android:onClick="onClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_main3_reset"
+        android:text="@string/reset"
+        android:layout_marginTop="10dp"
+        android:textSize="28sp"
+        android:onClick="onClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
