@@ -3,9 +3,7 @@ package com.example.test2.utils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import com.example.test2.R
 import com.example.test2.databinding.ListviewTempBinding
 import de.hdodenhof.circleimageview.CircleImageView
@@ -23,6 +21,7 @@ class CustomAdapter(private val data:List<DataModel>):BaseAdapter() {
             holder= CustomViewHolder()
             holder.img=view.findViewById<CircleImageView>(R.id.img_programming)
             holder.txt=view.findViewById<TextView>(R.id.txt_programming)
+            holder.btn=view.findViewById<Button>(R.id.btn_more)
             view.tag=holder
         }else{
             holder=convertView.tag as CustomViewHolder
@@ -34,10 +33,18 @@ class CustomAdapter(private val data:List<DataModel>):BaseAdapter() {
         val data1=getItem(position)
 
         val id=parent.context.resources.getIdentifier(data1.img,"drawable",parent.context.packageName)
-
-        view.findViewById<CircleImageView>(R.id.img_programming).setImageResource(id)
+        val img= view.findViewById<CircleImageView>(R.id.img_programming)
+        val btn= view.findViewById<Button>(R.id.btn_more)
+        img.setImageResource(id)
         view.findViewById<TextView>(R.id.txt_programming).text=data1.name
 
+       img.setOnClickListener {
+           Toast.makeText(parent.context,"${data1.name} ", Toast.LENGTH_SHORT).show()
+       }
+
+        btn.setOnClickListener {
+            Toast.makeText(parent.context,"This is Info of ${data1.name} Language ", Toast.LENGTH_SHORT).show()
+        }
 
         return view
     }
@@ -50,6 +57,7 @@ class CustomAdapter(private val data:List<DataModel>):BaseAdapter() {
     class CustomViewHolder{
         lateinit var img:CircleImageView
         lateinit var txt:TextView
+        lateinit var btn:Button
 
     }
 }

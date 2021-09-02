@@ -50,8 +50,6 @@ class MainActivity5 : AppCompatActivity() {
         val data=CustomAdapter(listData)
         binding.lstMain5.adapter=data
 
-        binding.lstMain5.setOnItemClickListener { parent, view, position, id ->
-            Toast.makeText(this,"${listData[position].name} ",Toast.LENGTH_SHORT).show()
-        }
+
     }
 }

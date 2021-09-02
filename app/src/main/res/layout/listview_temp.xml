@@ -23,4 +23,11 @@
         tools:text="@string/app_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_more"
+        android:text="See More"
+        android:layout_marginLeft="70dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </LinearLayout>
