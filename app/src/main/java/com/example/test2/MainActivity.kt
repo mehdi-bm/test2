@@ -14,7 +14,8 @@ class MainActivity : AppCompatActivity() {
     val listData = listOf(
         "Timer 1",
         "Timer 2",
-        "Test 4"
+        "Test 4",
+        "List Programming Language"
     )
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +42,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 2->{
                     val i=Intent(this,MainActivity4::class.java)
+                    startActivity(i)
+                }  3->{
+                    val i=Intent(this,MainActivity5::class.java)
                     startActivity(i)
                 }
 

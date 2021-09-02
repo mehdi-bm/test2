@@ -4,11 +4,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
+import android.widget.TextView
 import com.example.test2.R
 import com.example.test2.databinding.ListviewTempBinding
 
 class CustomAdapter(private val data:List<DataModel>):BaseAdapter() {
-private lateinit var binding: ListviewTempBinding
+
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
 
         val view=LayoutInflater.from(parent!!.context).inflate(R.layout.listview_temp,null)
@@ -17,11 +19,9 @@ private lateinit var binding: ListviewTempBinding
 
         val id=parent.context.resources.getIdentifier(data1.img,"drawable",parent.context.packageName)
 
+        view.findViewById<ImageView>(R.id.img_programming).setImageResource(id)
+        view.findViewById<TextView>(R.id.txt_programming).text=data1.name
 
-
-        binding.imgProgramming.setImageResource(id)
-
-        binding.txtProgramming.text=data1.name
 
         return view
     }
