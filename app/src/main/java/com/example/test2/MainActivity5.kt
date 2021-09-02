@@ -1,5 +1,6 @@
 package com.example.test2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -50,6 +51,11 @@ class MainActivity5 : AppCompatActivity() {
         val data=CustomAdapter(listData)
         binding.lstMain5.adapter=data
 
-
+        binding.lstMain5.setOnItemClickListener { parent, view, position, id ->
+            val intent=Intent(this,MainActivity6::class.java)
+            intent.putExtra("name",listData[position].name)
+            intent.putExtra("image",listData[position].img)
+            startActivity(intent)
+        }
     }
 }
