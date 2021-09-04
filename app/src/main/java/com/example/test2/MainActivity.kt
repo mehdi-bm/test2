@@ -21,9 +21,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityMainBinding.inflate(layoutInflater)
-        val view=binding.root
-        setContentView(view)
-        setTitle("Main")
+        val view = binding.root.apply { setContentView(this) }
+        title = "Main"
 
         val adapter=ArrayAdapter(this,android.R.layout.simple_list_item_activated_1,listData)
 

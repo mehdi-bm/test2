@@ -3,12 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mehdi/AndroidStudioProjects/test2/app/src/main/res/drawable/shape_test.xml" value="0.15" />
         <entry key="..\:/Users/mehdi/AndroidStudioProjects/test2/app/src/main/res/layout/activity_calculate.xml" value="0.1" />
         <entry key="..\:/Users/mehdi/AndroidStudioProjects/test2/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/mehdi/AndroidStudioProjects/test2/app/src/main/res/layout/activity_main2.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/mehdi/AndroidStudioProjects/test2/app/src/main/res/layout/activity_main3.xml" value="0.18" />
         <entry key="..\:/Users/mehdi/AndroidStudioProjects/test2/app/src/main/res/layout/activity_main4.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/mehdi/AndroidStudioProjects/test2/app/src/main/res/layout/activity_main6.xml" value="0.15" />
+        <entry key="..\:/Users/mehdi/AndroidStudioProjects/test2/app/src/main/res/layout/activity_main6.xml" value="0.25" />
         <entry key="..\:/Users/mehdi/AndroidStudioProjects/test2/app/src/main/res/layout/listview_temp.xml" value="0.1" />
         <entry key="..\:/Users/mehdi/AndroidStudioProjects/test2/app/src/main/res/layout/listview_template.xml" value="0.1" />
       </map>
