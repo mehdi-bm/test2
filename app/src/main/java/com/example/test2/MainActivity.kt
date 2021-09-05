@@ -15,7 +15,8 @@ class MainActivity : AppCompatActivity() {
         "Timer 1",
         "Timer 2",
         "Test 4",
-        "List Programming Language"
+        "List Programming Language",
+        "WebView"
     )
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,7 +46,10 @@ class MainActivity : AppCompatActivity() {
                 }  3->{
                     val i=Intent(this,MainActivity5::class.java)
                     startActivity(i)
-                }
+                }  4->{
+                val i=Intent(this,MainActivity7::class.java)
+                startActivity(i)
+            }
 
             }
         }
