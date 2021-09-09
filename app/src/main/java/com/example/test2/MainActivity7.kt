@@ -1,62 +1,97 @@
 package com.example.test2
 
+import android.content.Context
+import android.net.ConnectivityManager
 import android.net.Uri
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.widget.MediaController
 import android.widget.VideoView
+import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AlertDialog
+import com.example.test2.databinding.ActivityMain7Binding
 import java.lang.Exception
 
 
 class MainActivity7 : AppCompatActivity() {
     private lateinit var mediaController: MediaController
+    private var position=0
+    private lateinit var binding: ActivityMain7Binding
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main7)
+        binding= ActivityMain7Binding.inflate(layoutInflater)
+        val view=binding.root
+        setContentView(view)
+
+
 
         mediaController= MediaController(this)
 
-        val uriVideo="android.resource://$packageName"
-        val video=findViewById<VideoView>(R.id.videoView)
 
-        try {
-            video.setMediaController(mediaController)
-            video.setVideoURI(Uri.parse("$uriVideo/${R.raw.parsik_amoozeshtest}"))
-            video.setOnPreparedListener {
-                mediaController.show(video.duration)
-
-                //video.start()
-                //video.pause()
-                //video.stopPlayback()
-            }
-            video.setOnErrorListener { mp, what, extra ->
-                false
-            }
-            video.setOnCompletionListener {
-
-            }
-        }catch (ex:Exception){
-            ex.printStackTrace()
+        binding.videoView.setOnPreparedListener {
+            //mediaController.show(binding.videoView.duration)
+            binding.videoView.seekTo(position)
+            if(position==0)
+                binding.videoView.start()
+            else
+                binding.videoView.pause()
+            //video.pause()
+            //video.stopPlayback()
         }
 
+        loadVideo()
+
+
+
+
+
+
+
+    }
+    private fun loadVideo(){
+        val uriVideo="android.resource://$packageName"
+        val conManager=getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val netInfo=conManager.activeNetworkInfo
+
+
+        if (netInfo!=null && netInfo.isConnected){
+            try {
+                binding.videoView.setMediaController(mediaController)
+                //binding.videoView.setVideoURI(Uri.parse("$uriVideo/${R.raw.parsik_amoozeshtest}"))
+                binding.videoView.setVideoURI(Uri.parse("https://dl.daneshjooyar.com/mvie/Ahmadi-Alireza/Kotlin-1249867/S03-Part36-VideoView2.mp4"))
+
+            }catch (ex:Exception){
+                ex.printStackTrace()
+            }
+        }else{
+            AlertDialog.Builder(this)
+                .setTitle("No Internet")
+                .setMessage("Change Internet State and Reload")
+                .setPositiveButton("Reload"){_,_->
+                    loadVideo()
+                }
+                .setNegativeButton("Cancel"){_,_->
+
+                }
+                .create()
+                .show()
+        }
     }
 
-
-
-    override fun onStart() {
-        super.onStart()
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("position",binding.videoView.currentPosition)
+        binding.videoView.pause()
     }
 
-    override fun onResume() {
-        super.onResume()
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        position= savedInstanceState.getInt("position")
+        binding.videoView.seekTo(position)
     }
 
-    override fun onStop() {
-        super.onStop()
-    }
-
-    override fun onPause() {
-        super.onPause()
-    }
 }
