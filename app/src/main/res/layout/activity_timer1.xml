@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Timer1Activity">
+    <Chronometer
+        android:id="@+id/chr_main2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:textSize="44sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ToggleButton
+        android:id="@+id/tgbtn_main2"
+        android:textOn="OFF"
+        android:textOff="ON"
+        android:textSize="35dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_main2_reset"
+        android:text="RESET"
+        android:textSize="21sp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>
