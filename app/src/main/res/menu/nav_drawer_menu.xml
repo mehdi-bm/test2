@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_home"
+            android:title="@string/home"
+            android:icon="@drawable/ic_baseline_home_24"/>
+
+        <item android:id="@+id/nav_person"
+            android:title="@string/person"
+            android:icon="@drawable/ic_baseline_person_24"/>
+
+        <item android:id="@+id/nav_message"
+            android:title="@string/message"
+            android:icon="@drawable/ic_baseline_message_24"/>
+
+        <item android:id="@+id/nav_basket"
+            android:title="@string/basket"
+            android:icon="@drawable/ic_baseline_shopping_basket_24"/>
+    </group>
+
+    <item android:title="test">
+        <menu>
+            <item android:id="@+id/nav_setting"
+                android:title="@string/settings"
+                android:icon="@drawable/ic_baseline_settings_24"/>
+
+            <item android:id="@+id/nav_phone"
+                android:title="@string/phone"
+                android:icon="@drawable/ic_baseline_local_phone_24"/>
+
+
+        </menu>
+    </item>
+
+
+</menu>
