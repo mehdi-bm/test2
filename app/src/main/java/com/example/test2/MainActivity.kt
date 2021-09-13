@@ -22,7 +22,8 @@ class MainActivity : AppCompatActivity() {
         "MediaPlayer",
         "TimePicker",
         "DatePicker",
-        "NavigationDrawer"
+        "NavigationDrawer",
+        "RecyclerView"
     )
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,6 +69,9 @@ class MainActivity : AppCompatActivity() {
                     startActivity(i)
                 }8->{
                     val i=Intent(this,MainActivity2::class.java)
+                    startActivity(i)
+                }9->{
+                    val i=Intent(this,RecyclerViewActivity::class.java)
                     startActivity(i)
                 }
 
