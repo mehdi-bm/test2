@@ -66,6 +66,7 @@ class RecyclerViewActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager=LinearLayoutManager(this,HORIZONTAL,true)
         binding.recyclerView.adapter=RecyclerAdapter(data,this)
 
+
         binding.recyclerView2.layoutManager=LinearLayoutManager(this)
         binding.recyclerView2.adapter= RecyclerAdapter2(data2,this)
 

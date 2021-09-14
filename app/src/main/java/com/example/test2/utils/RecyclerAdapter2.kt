@@ -25,7 +25,7 @@ class RecyclerAdapter2(private val data:List<DataModelRecycler2>,private val con
     }
 
     override fun onBindViewHolder(parent: CustomViewHolder, position: Int) {
-        parent.img.setImageResource(data[position].image)
+        parent.img1.setImageResource(data[position].image)
         parent.txtTitle.text=data[position].title
         parent.txtBrand.text=data[position].brand
         parent.txtPrice.text=data[position].price
@@ -46,7 +46,7 @@ class RecyclerAdapter2(private val data:List<DataModelRecycler2>,private val con
     override fun getItemCount(): Int =data.count()
 
     inner class CustomViewHolder(val itemView:View):RecyclerView.ViewHolder(itemView){
-         val img=itemView.findViewById<ImageView>(R.id.img_row_recycler2)
+         val img1=itemView.findViewById<ImageView>(R.id.img_row_recycler2)
          val txtTitle=itemView.findViewById<TextView>(R.id.txt_row_recycler2_title)
          val txtBrand=itemView.findViewById<TextView>(R.id.txt_row_recycler2_brand)
          val txtPrice=itemView.findViewById<TextView>(R.id.txt_row_recycler2_price)
