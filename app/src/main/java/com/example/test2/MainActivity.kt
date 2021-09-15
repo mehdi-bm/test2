@@ -24,7 +24,8 @@ class MainActivity : AppCompatActivity() {
         "DatePicker",
         "NavigationDrawer",
         "RecyclerView",
-        "Picasso"
+        "Picasso",
+        "Fragment"
     )
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,6 +77,9 @@ class MainActivity : AppCompatActivity() {
                     startActivity(i)
                 }10->{
                     val i=Intent(this,PicassoActivity::class.java)
+                    startActivity(i)
+                }11->{
+                    val i=Intent(this,MainActivity7::class.java)
                     startActivity(i)
                 }
 
