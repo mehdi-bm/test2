@@ -37,6 +37,7 @@ class RecyclerAdapter(private val data:List<DataModelRecycler>,private val conte
             val intent= Intent(context,ShowActivity::class.java)
             intent.putExtra("imageID",data[position].image)
             intent.putExtra("txtPrice",data[position].price)
+            intent.putExtra("type","recycler1")
             context.startActivity(intent)
         }
     }
