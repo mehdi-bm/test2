@@ -26,7 +26,8 @@ class MainActivity : AppCompatActivity() {
         "RecyclerView",
         "Picasso",
         "SliderView",
-        "Fragment"
+        "Fragment",
+        "RealmDataBase"
     )
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -84,6 +85,9 @@ class MainActivity : AppCompatActivity() {
                     startActivity(i)
                 }12->{
                     val i=Intent(this,MainActivity7::class.java)
+                    startActivity(i)
+                }13->{
+                    val i=Intent(this,UserActivity::class.java)
                     startActivity(i)
                 }
 
