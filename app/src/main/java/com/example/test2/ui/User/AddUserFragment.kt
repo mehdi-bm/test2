@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
+import com.example.test2.R
 import com.example.test2.databinding.FragmentAdduserBinding
 import com.example.test2.realmModel.ObjectUser
 import com.example.test2.realmModel.UserDAO
@@ -44,6 +46,7 @@ class AddUserFragment : Fragment() {
                 Toast.makeText(activity, "لطفا فیلد های خالی را پر نمایید", Toast.LENGTH_SHORT).show()
             } else {
                 addUser()
+                findNavController().navigate(R.id.action_AddUserFragment_to_UserFragment)
             }
         }
     }

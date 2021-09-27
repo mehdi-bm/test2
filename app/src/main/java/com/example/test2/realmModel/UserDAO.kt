@@ -24,6 +24,11 @@ class UserDAO {
             }
             )
     }
+    fun Update(objectUser: ObjectUser){
+        realm.executeTransaction {
+            it.copyToRealmOrUpdate(objectUser)
+        }
+    }
 
     fun readAll():RealmResults<ObjectUser> =realm.where(ObjectUser::class.java).findAll()
 

@@ -14,6 +14,7 @@ class App:Application(){
         Realm.init(this)
         val config=RealmConfiguration.Builder()
             .name("testDB")
+            .allowWritesOnUiThread(true)
             .schemaVersion(1)
             .build()
 

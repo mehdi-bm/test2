@@ -32,7 +32,13 @@ class UserActivity : AppCompatActivity() {
 
     }
 
+    override fun onResume() {
+        val navController = findNavController(R.id.nav_host_fragment_content_user)
+        appBarConfiguration = AppBarConfiguration(navController.graph)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+        super.onResume()
 
+    }
 
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_user)

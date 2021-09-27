@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.test2.databinding.ActivityEditUserBinding
+import com.example.test2.realmModel.ObjectUser
 import com.example.test2.realmModel.UserDAO
 
 class EditUserActivity : AppCompatActivity() {
@@ -33,6 +34,7 @@ class EditUserActivity : AppCompatActivity() {
                 Toast.makeText(this, "لطفا فیلد های خالی را پر نمایید", Toast.LENGTH_SHORT).show()
             } else {
                 editUser(id)
+                finish()
             }
 
         }
@@ -40,6 +42,16 @@ class EditUserActivity : AppCompatActivity() {
     }
 
     private fun editUser(id:Int) {
-        Toast.makeText(this, "$id", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "$id", Toast.LENGTH_SHORT).show()
+        try {
+            val objectUser=ObjectUser()
+            objectUser.id=id
+            objectUser.name=binding.txtEditUserName.text.toString()
+            objectUser.family=binding.txtEditUserFamily.text.toString()
+            userDAO.Update(objectUser)
+        }catch (ex:Exception)
+        {
+            ex.printStackTrace()
+        }
     }
 }
