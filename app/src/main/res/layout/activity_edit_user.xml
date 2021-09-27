@@ -4,20 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.User.AddUserFragment">
-
+    tools:context=".EditUserActivity">
     <Button
-        android:id="@+id/btn_addUser_Save"
+        android:id="@+id/btn_editUser_Save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_addUser_Family" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_editUser_Family" />
 
     <EditText
-        android:id="@+id/txt_addUser_Name"
+        android:id="@+id/txt_editUser_Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
@@ -42,7 +41,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/txt_addUser_Family"
+        android:id="@+id/txt_editUser_Family"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -53,5 +52,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_addUser_Name" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_editUser_Name" />
 </androidx.constraintlayout.widget.ConstraintLayout>

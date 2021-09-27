@@ -24,7 +24,28 @@ class UserDAO {
             }
             )
     }
+
     fun readAll():RealmResults<ObjectUser> =realm.where(ObjectUser::class.java).findAll()
+
+    fun readById(id:Int):ObjectUser? =realm.where(ObjectUser::class.java).equalTo("id",id).findFirst()
+
+    fun deleteAll(){
+        realm.executeTransaction {
+            readAll().deleteAllFromRealm()
+        }
+    }
+
+    fun deleteById(id:Int){
+        realm.executeTransaction{
+            try {
+                readById(id)?.deleteFromRealm()
+            }catch (ex:Exception){
+                ex.printStackTrace()
+            }
+
+        }
+    }
+
     fun CloseDB(){
         realm.close()
     }

@@ -1,5 +1,6 @@
 package com.example.test2.ui.User
 
+import android.annotation.SuppressLint
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -44,11 +45,12 @@ class UserFragment : Fragment() {
             findNavController().navigate(R.id.action_UserFragment_to_AddUserFragment)
         }
     }
+    @SuppressLint("UseRequireInsteadOfGet")
     fun FillData(){
         try {
             val result=userDAO.readAll()
             if (result.size>0){
-                val adapter=UserAdapter(result)
+                val adapter=UserAdapter(result, activity!!)
                 binding.recyclerUser.layoutManager= LinearLayoutManager(activity)
                 binding.recyclerUser.adapter=adapter
             }
