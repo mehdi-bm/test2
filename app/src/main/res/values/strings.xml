@@ -36,5 +36,6 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="save">Save</string>
     <string name="_25">25</string>
+    <string name="city_name">نام شهر مورد تظر</string>
 
 </resources>
