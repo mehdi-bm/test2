@@ -5,3 +5,4 @@ data class DataModelRecycler2(val image:Int,val title:String,val brand:String,va
 data class DataModel(val name:String,val img:String)
 data class DataModelUser(val id:Int,val name:String,val family:String)
 data class DataModelJson(val name:String,val family:String,val age:String)
+data class DataModelWeather(val desc:String,val speed:Double,val humidity:Int)

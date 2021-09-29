@@ -93,4 +93,11 @@
             android:layout_width="140dp"
             android:layout_height="wrap_content"/>
     </FrameLayout>
+    
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:visibility="invisible"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 </LinearLayout>

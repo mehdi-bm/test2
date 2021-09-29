@@ -4,6 +4,7 @@ import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.service.voice.VoiceInteractionSession
+import android.view.View
 import android.widget.Toast
 import com.android.volley.DefaultRetryPolicy
 import com.android.volley.Request
@@ -11,6 +12,8 @@ import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
 import com.example.test2.databinding.ActivityMain9Binding
+import com.example.test2.utils.ApiService
+import com.example.test2.utils.DataModelWeather
 import org.json.JSONObject
 import java.io.BufferedReader
 import java.io.InputStream
@@ -19,13 +22,14 @@ import java.lang.StringBuilder
 import java.net.URL
 import javax.net.ssl.HttpsURLConnection
 
-class MainActivity9 : AppCompatActivity() {
+class MainActivity9 : AppCompatActivity(),ApiService.OnWeatherInfoReceived {
     lateinit var binding:ActivityMain9Binding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= ActivityMain9Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val apiService=ApiService(this)
         binding.btnMain9ShowWeather.setOnClickListener {
             if(binding.txtMain9CityName.text.toString()=="") {
                 Toast.makeText(this, "لطفا شهر مورد نظر شما را وارد نمایید", Toast.LENGTH_SHORT)
@@ -33,41 +37,29 @@ class MainActivity9 : AppCompatActivity() {
                 return@setOnClickListener
             }
           val city=binding.txtMain9CityName.text.toString()
+            binding.progressBar.visibility= View.VISIBLE
             //api
            // getData(city)
 
-            //volley
-            getDataInVolley(city)
+            //volley 1
+            //getDataInVolley(city)
+
+            //volley 2
+// 1           apiService.getDataInVolley(city,object:ApiService.OnWeatherInfoReceived{
+//                override fun OnReceived(dataModelWeather: DataModelWeather) {
+//
+//                }
+
+//            })
+
+            //2
+            apiService.getDataInVolley(city,this)
+
         }
 
     }
 
-    private fun getDataInVolley(cityName: String) {
-        val api="https://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=62a82e85aad1428feccb1e22cac0d596"
-        val request=JsonObjectRequest(Request.Method.GET,api,null,
-            Response.Listener{
-                val weather=it.getJSONArray("weather")
-                val main=it.getJSONObject("main")
-                val wind=it.getJSONObject("wind")
 
-
-                val array=weather.getJSONObject(0)
-
-                val description=array.getString("description")
-                val humidity=main.getInt("humidity")
-                val speed=wind.getDouble("speed")
-
-                binding.txtMain9Condition.text=description
-                binding.txtMain9Wet.text=humidity.toString()
-                binding.txtMain9Speed.text=speed.toString()
-        }, Response.ErrorListener {
-
-        })
-        request.retryPolicy=DefaultRetryPolicy(10000,1,1f)
-        val requestQueue=Volley.newRequestQueue(this)
-        requestQueue.add(request)
-
-    }
 
     private fun getData(cityName:String) {
         val api="https://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=62a82e85aad1428feccb1e22cac0d596"
@@ -121,5 +113,14 @@ class MainActivity9 : AppCompatActivity() {
             ex.printStackTrace()
         }
         return stringBuilder.toString()
+    }
+
+    override fun OnReceived(dataModelWeather: DataModelWeather) {
+       binding.apply {
+           txtMain9Condition.text=dataModelWeather.desc
+           txtMain9Speed.text=dataModelWeather.speed.toString()
+           txtMain9Wet.text=dataModelWeather.humidity.toString()
+           progressBar.visibility=View.INVISIBLE
+       }
     }
 }
