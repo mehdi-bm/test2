@@ -29,7 +29,8 @@ class MainActivity : AppCompatActivity() {
         "Fragment",
         "RealmDataBase",
         "JsonParse",
-        "WeatherApi"
+        "WeatherApi",
+        "RetrofitApi"
     )
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -97,7 +98,12 @@ class MainActivity : AppCompatActivity() {
                 }15->{
                     val i=Intent(this,MainActivity9::class.java)
                     startActivity(i)
+                }16->{
+                    val i=Intent(this,MainActivity10::class.java)
+                    startActivity(i)
                 }
+
+                
 
             }
         }

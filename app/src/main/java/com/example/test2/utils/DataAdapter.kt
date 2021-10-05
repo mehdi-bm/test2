@@ -8,7 +8,7 @@ import com.example.test2.R
 import com.example.test2.databinding.ListviewTempBinding
 import de.hdodenhof.circleimageview.CircleImageView
 
-class DataAdapter(private val list:List<DataModelJson>):BaseAdapter() {
+class DataAdapter(private val list:List<Users>):BaseAdapter() {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
@@ -42,7 +42,7 @@ class DataAdapter(private val list:List<DataModelJson>):BaseAdapter() {
         return view
     }
 
-    override fun getItem(position: Int): DataModelJson =list[position]
+    override fun getItem(position: Int): Users =list[position]
     override fun getItemId(position: Int): Long =0
 
     override fun getCount(): Int =list.count()

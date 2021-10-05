@@ -41,8 +41,8 @@ class MainActivity8 : AppCompatActivity() {
             list.add(DataModelJson(name,family,age))
         }
 
-        val adapter=DataAdapter(list)
-        binding.listView.adapter=adapter
+        //val adapter=DataAdapter(list)
+       // binding.listView.adapter=adapter
     }
 
     private fun convertStreamToString(stream: InputStream):String {
