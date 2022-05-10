@@ -13,69 +13,69 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:theme="@style/Theme.Test2">
         <activity
-            android:name=".MainActivity10"
+            android:name=".activites.MainActivity10"
             android:exported="true" />
         <activity
-            android:name=".MainActivity9"
+            android:name=".activites.MainActivity9"
             android:exported="true" />
         <activity
-            android:name=".MainActivity8"
+            android:name=".activites.MainActivity8"
             android:exported="true" />
         <activity
-            android:name=".EditUserActivity"
+            android:name=".activites.EditUserActivity"
             android:exported="true" />
         <activity
-            android:name=".UserActivity"
+            android:name=".activites.UserActivity"
             android:exported="true"
             android:label="@string/title_activity_user"
             android:theme="@style/Theme.Test2.NoActionBar" />
         <activity
-            android:name=".SliderViewActivity"
+            android:name=".activites.SliderViewActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity7"
+            android:name=".activites.MainActivity7"
             android:exported="true" />
         <activity
-            android:name=".PicassoActivity"
+            android:name=".activites.PicassoActivity"
             android:exported="true" />
         <activity
-            android:name=".ShowActivity"
+            android:name=".activites.ShowActivity"
             android:exported="true" />
         <activity
-            android:name=".RecyclerViewActivity"
+            android:name=".activites.RecyclerViewActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".activites.MainActivity2"
             android:exported="true" />
         <activity
-            android:name=".DatePickerActivity"
+            android:name=".activites.DatePickerActivity"
             android:exported="true" />
         <activity
-            android:name=".TimePickerActivity"
+            android:name=".activites.TimePickerActivity"
             android:exported="true" />
         <activity
-            android:name=".MediaPlayerActivity"
+            android:name=".activites.MediaPlayerActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".VideoViewActivity"
+            android:name=".activites.VideoViewActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
-            android:name=".MainActivity6"
+            android:name=".activites.MainActivity6"
             android:exported="true" />
         <activity
-            android:name=".MainActivity5"
+            android:name=".activites.MainActivity5"
             android:exported="true" />
         <activity
-            android:name=".MainActivity4"
+            android:name=".activites.MainActivity4"
             android:exported="true" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".activites.MainActivity3"
             android:exported="true" />
-        <activity android:name=".Timer1Activity" />
+        <activity android:name=".activites.Timer1Activity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activites.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.example.test2
+package com.example.test2.activites
 
 
 
@@ -9,6 +9,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import com.example.test2.R
 import com.example.test2.databinding.ActivityMainBinding
 
 
@@ -47,59 +48,59 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"${listData[i]} ${i.toString()}",Toast.LENGTH_SHORT).show()
             when(i){
                 0->{
-                    val i=Intent(this,Timer1Activity::class.java)
+                    val i=Intent(this, Timer1Activity::class.java)
                     startActivity(i)
                 }
                 1->{
-                    val i=Intent(this,MainActivity3::class.java)
+                    val i=Intent(this, MainActivity3::class.java)
                     startActivity(i)
                 }
                 2->{
-                    val i=Intent(this,MainActivity4::class.java)
+                    val i=Intent(this, MainActivity4::class.java)
                     startActivity(i)
                 }  3->{
-                    val i=Intent(this,MainActivity5::class.java)
+                    val i=Intent(this, MainActivity5::class.java)
                     startActivity(i)
                 }
                 4->{
-                    val i=Intent(this,VideoViewActivity::class.java)
+                    val i=Intent(this, VideoViewActivity::class.java)
                     startActivity(i)
                 }
                 5->{
-                    val i=Intent(this,MediaPlayerActivity::class.java)
+                    val i=Intent(this, MediaPlayerActivity::class.java)
                     startActivity(i)
                 } 6->{
-                    val i=Intent(this,TimePickerActivity::class.java)
+                    val i=Intent(this, TimePickerActivity::class.java)
                     startActivity(i)
                 }7->{
-                    val i=Intent(this,DatePickerActivity::class.java)
+                    val i=Intent(this, DatePickerActivity::class.java)
                     startActivity(i)
                 }8->{
-                    val i=Intent(this,MainActivity2::class.java)
+                    val i=Intent(this, MainActivity2::class.java)
                     startActivity(i)
                 }9->{
-                    val i=Intent(this,RecyclerViewActivity::class.java)
+                    val i=Intent(this, RecyclerViewActivity::class.java)
                     startActivity(i)
                 }10->{
-                    val i=Intent(this,PicassoActivity::class.java)
+                    val i=Intent(this, PicassoActivity::class.java)
                     startActivity(i)
                 }11->{
-                    val i=Intent(this,SliderViewActivity::class.java)
+                    val i=Intent(this, SliderViewActivity::class.java)
                     startActivity(i)
                 }12->{
-                    val i=Intent(this,MainActivity7::class.java)
+                    val i=Intent(this, MainActivity7::class.java)
                     startActivity(i)
                 }13->{
-                    val i=Intent(this,UserActivity::class.java)
+                    val i=Intent(this, UserActivity::class.java)
                     startActivity(i)
                 }14->{
-                    val i=Intent(this,MainActivity8::class.java)
+                    val i=Intent(this, MainActivity8::class.java)
                     startActivity(i)
                 }15->{
-                    val i=Intent(this,MainActivity9::class.java)
+                    val i=Intent(this, MainActivity9::class.java)
                     startActivity(i)
                 }16->{
-                    val i=Intent(this,MainActivity10::class.java)
+                    val i=Intent(this, MainActivity10::class.java)
                     startActivity(i)
                 }
 
@@ -117,10 +118,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.menu_settings-> Toast.makeText(this, "settings", Toast.LENGTH_SHORT).show()
-            R.id.menu_account-> Toast.makeText(this, "account", Toast.LENGTH_SHORT).show()
-            R.id.menu_dashboard-> Toast.makeText(this, "dashboard", Toast.LENGTH_SHORT).show()
-            R.id.menu_alarm-> Toast.makeText(this, "alarm", Toast.LENGTH_SHORT).show()
+            R.id.menu_settings -> Toast.makeText(this, "settings", Toast.LENGTH_SHORT).show()
+            R.id.menu_account -> Toast.makeText(this, "account", Toast.LENGTH_SHORT).show()
+            R.id.menu_dashboard -> Toast.makeText(this, "dashboard", Toast.LENGTH_SHORT).show()
+            R.id.menu_alarm -> Toast.makeText(this, "alarm", Toast.LENGTH_SHORT).show()
 
 
         }

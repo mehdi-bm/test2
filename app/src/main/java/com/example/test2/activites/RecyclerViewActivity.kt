@@ -1,10 +1,11 @@
-package com.example.test2
+package com.example.test2.activites
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout.*
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.test2.R
 import com.example.test2.databinding.ActivityRecyclerViewBinding
 import com.example.test2.utils.DataModelRecycler
 import com.example.test2.utils.DataModelRecycler2

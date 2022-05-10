@@ -1,10 +1,10 @@
-package com.example.test2
+package com.example.test2.activites
 
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.test2.R
 import com.example.test2.databinding.ActivityMediaPlayerBinding
-import de.hdodenhof.circleimageview.CircleImageView
 
 class MediaPlayerActivity : AppCompatActivity() {
     private var isPlay=false
@@ -42,7 +42,9 @@ class MediaPlayerActivity : AppCompatActivity() {
             }
             imgMediaStop.setOnClickListener {
                 mediaPlayer.stop()
-                mediaPlayer = MediaPlayer.create(this@MediaPlayerActivity, R.raw.misagh_radgolesorkh)
+                mediaPlayer = MediaPlayer.create(this@MediaPlayerActivity,
+                    R.raw.misagh_radgolesorkh
+                )
                 imgMediaPlay.setImageResource(R.drawable.media_playback_start_icon)
                 isPlay=false
             }

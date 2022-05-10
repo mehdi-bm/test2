@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="top"
-    tools:context=".DatePickerActivity">
+    tools:context=".activites.DatePickerActivity">
     <DatePicker
         android:id="@+id/datepicker"
         android:layout_marginTop="20dp"

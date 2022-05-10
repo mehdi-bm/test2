@@ -11,7 +11,7 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.test2.R
-import com.example.test2.ShowActivity
+import com.example.test2.activites.ShowActivity
 
 class RecyclerAdapter(private val data:List<DataModelRecycler>,private val context:Context)
     :RecyclerView.Adapter<RecyclerAdapter.CustomViewHolder>() {
@@ -34,7 +34,7 @@ class RecyclerAdapter(private val data:List<DataModelRecycler>,private val conte
         }
 
         parent.cardView.setOnClickListener {
-            val intent= Intent(context,ShowActivity::class.java)
+            val intent= Intent(context, ShowActivity::class.java)
             intent.putExtra("imageID",data[position].image)
             intent.putExtra("txtPrice",data[position].price)
             intent.putExtra("type","recycler1")

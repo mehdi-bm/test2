@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.test2.R
-import com.example.test2.ShowActivity
+import com.example.test2.activites.ShowActivity
 import com.squareup.picasso.Picasso
 
 class PicassoAdapter(private val data:List<String>,private val context: Context)

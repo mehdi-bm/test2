@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity3">
+    tools:context=".activites.MainActivity3">
 
     <TextView
         android:id="@+id/txt_main3_price"

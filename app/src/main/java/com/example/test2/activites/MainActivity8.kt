@@ -1,9 +1,9 @@
-package com.example.test2
+package com.example.test2.activites
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.test2.R
 import com.example.test2.databinding.ActivityMain8Binding
-import com.example.test2.utils.DataAdapter
 import com.example.test2.utils.DataModelJson
 import org.json.JSONObject
 import java.io.BufferedReader

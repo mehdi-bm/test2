@@ -1,4 +1,4 @@
-package com.example.test2
+package com.example.test2.activites
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity

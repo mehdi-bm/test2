@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.test2.EditUserActivity
+import com.example.test2.activites.EditUserActivity
 import com.example.test2.R
 import com.example.test2.realmModel.ObjectUser
 import com.example.test2.realmModel.UserDAO

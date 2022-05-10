@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="top"
-    tools:context=".TimePickerActivity">
+    tools:context=".activites.TimePickerActivity">
 <TimePicker
     android:id="@+id/timepicker"
     android:layout_weight="0.7"

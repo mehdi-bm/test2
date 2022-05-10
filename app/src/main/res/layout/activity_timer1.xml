@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Timer1Activity">
+    tools:context=".activites.Timer1Activity">
     <Chronometer
         android:id="@+id/chr_main2"
         android:layout_gravity="center_horizontal"

@@ -1,16 +1,15 @@
-package com.example.test2
+package com.example.test2.activites
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.text.Spannable
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.style.StrikethroughSpan
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.view.isInvisible
+import com.example.test2.R
 import com.example.test2.databinding.ActivityMain3Binding
 
 class MainActivity3 : AppCompatActivity() {

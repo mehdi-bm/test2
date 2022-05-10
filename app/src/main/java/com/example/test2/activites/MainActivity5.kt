@@ -1,10 +1,8 @@
-package com.example.test2
+package com.example.test2.activites
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import com.example.test2.databinding.ActivityMain4Binding
 import com.example.test2.databinding.ActivityMain5Binding
 import com.example.test2.utils.CustomAdapter
 import com.example.test2.utils.DataModel
@@ -52,7 +50,7 @@ class MainActivity5 : AppCompatActivity() {
         binding.lstMain5.adapter=data
 
         binding.lstMain5.setOnItemClickListener { parent, view, position, id ->
-            val intent=Intent(this,MainActivity6::class.java)
+            val intent=Intent(this, MainActivity6::class.java)
             intent.putExtra("name",listData[position].name)
             intent.putExtra("image",listData[position].img)
             startActivity(intent)

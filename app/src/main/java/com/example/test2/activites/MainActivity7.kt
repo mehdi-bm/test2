@@ -1,8 +1,9 @@
-package com.example.test2
+package com.example.test2.activites
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import com.example.test2.R
 import com.example.test2.databinding.ActivityMain7Binding
 import com.example.test2.ui.TestFragment.FirstFragment
 

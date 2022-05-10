@@ -1,8 +1,9 @@
-package com.example.test2
+package com.example.test2.activites
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager.LayoutParams.FLAG_FULLSCREEN
+import com.example.test2.R
 import com.example.test2.databinding.ActivityShowBinding
 import com.squareup.picasso.Picasso
 
@@ -19,7 +20,7 @@ class ShowActivity : AppCompatActivity() {
            when(type){
                "recycler"->
                {
-                   imgShow.setImageResource(intent.getIntExtra("imageID",R.drawable.phone1))
+                   imgShow.setImageResource(intent.getIntExtra("imageID", R.drawable.phone1))
                    txtShowPrice.text=intent.getStringExtra("txtPrice")
                }
                "picasso"->

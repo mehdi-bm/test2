@@ -1,16 +1,10 @@
-package com.example.test2
+package com.example.test2.activites
 
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.service.voice.VoiceInteractionSession
 import android.view.View
 import android.widget.Toast
-import com.android.volley.DefaultRetryPolicy
-import com.android.volley.Request
-import com.android.volley.Response
-import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.Volley
 import com.example.test2.databinding.ActivityMain9Binding
 import com.example.test2.utils.ApiService
 import com.example.test2.utils.DataModelWeather

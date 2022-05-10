@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity6">
+    tools:context=".activites.MainActivity6">
     <ImageView
         android:id="@+id/img_main6"
         android:src="@drawable/user_icon"
